@@ -1,0 +1,23 @@
+ <script>
+ 	class Students
+ 	{
+ 		constructor(a,b,c)
+ 		{
+ 			this.name=a;
+ 		 	this.subject =b;
+ 			this.dept=c;
+ 		}
+ 	    getDetails() //method, function jokon class ar modde thak a tkon take method bole
+ 		{
+ 			return (`The Student name is ${this.name} and Department is ${this.dept}`)
+ 		}
+ 	}
+ 	var s1 = new Students("Abrar","CSE100","CSE");
+ 	var s2 = new Students("Faiyaj","MATH300","MATH");
+
+ 	document.write(s1.getDetails()+"<br>");
+ 	document.write(s2.getDetails());
+
+
+
+ </script>

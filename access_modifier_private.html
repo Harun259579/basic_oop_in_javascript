@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Private access Modifier in java script
+	</title>
+</head>
+<body>
+	<script>
+		class User 
+		{
+			#pass; //Private member or encapsolutated
+			constructor(x,y,z)
+			{
+				this.username=x;
+				this.email=y;
+				this.#pass=z;
+
+			}
+			login(a,b)
+			{
+				if(a==this.username && b==this.#pass)
+				{
+					console.log("Loggged In");
+				}
+				else
+				{
+					console.log("Login Failed");
+				}
+
+			}
+			register()
+			{
+				console.log(this.username+" is now Registered")
+			}
+
+		}
+
+		let Abrar=new User('Abrar','abc@gmail.com','123456')
+		Abrar.register();
+		Abrar.login('Abrar','123456')
+
+
+
+	</script>
+
+</body>
+</html>

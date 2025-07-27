@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		GET and SET Method in JAva Script
+	</title>
+</head>
+<body>
+	<script>
+		
+		class Student 
+		{
+			constructor()
+			{
+				var name;
+				var marks;
+			}
+			setname(a) //setter method
+			{
+				this.name=a;
+			}
+			setmarks(b) //setter method
+			{
+				this.marks=b;
+			}
+			getmarks() //getter method
+			{
+				return this.marks;
+			}
+			getname() //getter method
+			{
+				return this.name;
+			}
+		}
+
+		var s1 = new Student();
+		s1.setname("Abrar");
+		s1.setmarks(90);
+
+		var s2 = new Student();
+		s2.setname("Faiyaj");
+		s2.setmarks(80);
+
+
+		document.write("The Name is "+s1.getname()+"  and Marks is "+s1.getmarks()+"<br>");
+		document.write("The Name is "+s2.getname()+" and Marks is "+s2.getmarks()+"<br>");
+
+
+	</script>
+
+</body>
+</html>

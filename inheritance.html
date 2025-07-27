@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Private access Modifier in java script
+	</title>
+</head>
+<body>
+	<script>
+		class User 
+		{
+			#pass; //Private member or encapsolutated
+			constructor(x,y,z)
+			{
+				this.username=x;
+				this.email=y;
+				this.#pass=z;
+
+			}
+			login(a,b)
+			{
+				if(a==this.username && b==this.#pass)
+				{
+					console.log("Loggged In");
+				}
+				else
+				{
+					console.log("Login Failed");
+				}
+
+			}
+			register()
+			{
+				console.log(this.username+" is now Registered")
+			}
+
+			setpass(n)
+			{
+				this.#pass=n;
+			}
+
+		}
+
+		class Member extends User 
+		{
+			constructor(username,email,pass,o)
+			{
+				super(username,email,pass)
+				this.memberpackage=o;
+
+			}
+			getpackage()
+			{
+				document.write(this.username+" has subscribed to the "+ this.memberpackage+ "package");
+			}
+		}
+
+		let Faiyaj = new Member('Faiyaj','abc@gmail.com','123456','Standerd');
+		Faiyaj.login('Faiyaj','123456')
+		Faiyaj.getpackage();
+		document.write(Faiyaj.pass);
+
+		
+
+
+	</script>
+
+</body>
+</html>
